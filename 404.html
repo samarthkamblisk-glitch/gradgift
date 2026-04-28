@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GradGift — The Professional Registry for Graduates">
-    <title>GradGift</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/logo_icon.svg">
+    <title>404 | GradGift</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { red: '#E03030', cream: '#FDFBF7', dark: '#1A1A1A', gray: '#6B6B6B' },
+                    fontFamily: { sans: ['-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
     <style>
-        body { margin: 0; padding: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1a1a1a; }
-        .container { text-align: center; padding: 2rem; }
-        .site-nav { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
-        a { color: #00B2FF; text-decoration: none; padding: 0.5rem 1rem; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 14px; transition: all 0.2s; background: white; }
-        a:hover { border-color: #00B2FF; background: #00B2FF08; }
+        body { background: #FDFBF7; color: #1A1A1A; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>GradGift</h1>
-        <p>The Professional Registry for Graduates</p>
-        <div class="site-nav">
-            <a href="/">Home</a>
-            <a href="/giftlist">My Giftlist</a>
-            <a href="/school">My School</a>
-            <a href="/send-gift">Send a Gift</a>
-        </div>
+    <div class="text-center">
+        <h1 class="text-4xl font-bold mb-2">404</h1>
+        <p class="text-sm text-[#6B6B6B] mb-4">Page not found.</p>
+        <a href="/" class="text-sm text-[#E03030] hover:underline">Go home</a>
     </div>
 </body>
 </html>

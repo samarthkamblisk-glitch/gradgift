@@ -3,209 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="See what Cornell seniors are requesting on GradGift.">
+    <meta name="description" content="See what Cornell seniors are asking for on GradGift.">
     <title>My School | GradGift</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/logo_icon.svg">
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { accent: '#0066FF', 'accent-light': '#E8F0FF', navy: '#0A1628', slate: '#475569', subtle: '#E2E8F0' },
-                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: { red: '#E03030', cream: '#FDFBF7', dark: '#1A1A1A', gray: '#6B6B6B', light: '#E8E8E8' },
+                    fontFamily: { sans: ['-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        body { background: #F5F8FF; color: #0A1628; font-family: 'Inter', system-ui, sans-serif; }
-        .btn-primary { background: #0066FF; color: white; border: 1px solid #0066FF; transition: all 0.2s ease; }
-        .btn-primary:hover { background: #0052CC; }
-        .btn-secondary { background: white; color: #0A1628; border: 1px solid #E2E8F0; transition: all 0.2s ease; }
-        .btn-secondary:hover { border-color: #0066FF; color: #0066FF; }
-        .chip-in-progress { height: 5px; background: #E2E8F0; border-radius: 4px; overflow: hidden; }
-        .chip-in-fill { height: 100%; background: #0066FF; border-radius: 4px; }
-        .card-border { border: 1px solid #E2E8F0; }
+        body { background: #FDFBF7; color: #1A1A1A; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        .btn-red { background: #E03030; color: white; transition: opacity 0.2s; }
+        .btn-red:hover { opacity: 0.85; }
+        .btn-outline { border: 1px solid #E8E8E8; transition: opacity 0.2s; }
+        .btn-outline:hover { border-color: #1A1A1A; }
+        .link { color: #6B6B6B; transition: color 0.2s; }
+        .link:hover { color: #E03030; }
+        .bar { height: 4px; background: #E8E8E8; border-radius: 2px; overflow: hidden; }
+        .bar-fill { height: 100%; background: #E03030; border-radius: 2px; }
     </style>
 </head>
 <body>
-    <nav class="sticky top-0 w-full z-50 border-b border-[#E2E8F0] bg-white/90 backdrop-blur-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-lg bg-[#0066FF] flex items-center justify-center">
-                    <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
-                        <path d="M10 18C10 16.8954 10.8954 16 12 16H36C37.1046 16 38 16.8954 38 18V32C38 33.1046 37.1046 34 36 34H12C10.8954 34 10 33.1046 10 32V18Z" fill="white" opacity="0.3"/>
-                        <path d="M24 16V12M18 12H30" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                        <path d="M16 22H28M16 27H32" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <span class="font-bold text-lg tracking-tight">Grad<span class="font-light text-[#0066FF]">Gift</span></span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 text-[15px] font-medium text-[#475569]">
-                <a href="/" class="hover:text-[#0A1628]">Home</a>
-                <a href="/giftlist" class="hover:text-[#0A1628]">My Giftlist</a>
-                <a href="/school" class="text-[#0066FF]">My School</a>
-                <a href="/send-gift" class="hover:text-[#0A1628]">Send a Gift</a>
+    <nav class="sticky top-0 w-full z-50 bg-[#FDFBF7]/90 backdrop-blur border-b border-[#E8E8E8]/50">
+        <div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
+            <a href="/" class="font-semibold text-sm tracking-tight">GradGift</a>
+            <div class="hidden md:flex items-center gap-6 text-sm text-[#6B6B6B]">
+                <a href="/giftlist" class="link">My Giftlist</a>
+                <a href="/school" class="link" style="color:#E03030">My School</a>
+                <a href="/send-gift" class="link">Send a Gift</a>
             </div>
+            <a href="/send-gift" class="btn-red px-4 py-1.5 text-sm rounded-full">Send a Gift</a>
         </div>
     </nav>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- School Header -->
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-            <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-xl bg-white card-border shadow-sm flex items-center justify-center text-2xl">🏛️</div>
-                <div>
-                    <h1 class="text-3xl font-extrabold tracking-tight">Cornell University</h1>
-                    <p class="text-[#475569]">1,241 graduating seniors · 87 active Launchpads</p>
-                </div>
-            </div>
-            <div class="flex gap-3">
-                <button class="btn-secondary px-4 py-2 text-sm font-semibold rounded-xl">Filter by college</button>
-                <button class="btn-primary px-4 py-2 text-sm font-semibold rounded-xl">Create your Launchpad</button>
-            </div>
-        </div>
-
-        <!-- Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div class="bg-white rounded-xl card-border shadow-sm p-4 text-center">
-                <div class="text-[28px] font-extrabold text-[#0066FF]">$127K</div>
-                <p class="text-[13px] text-[#475569]">Total raised</p>
-            </div>
-            <div class="bg-white rounded-xl card-border shadow-sm p-4 text-center">
-                <div class="text-[28px] font-extrabold text-[#0066FF]">87</div>
-                <p class="text-[13px] text-[#475569]">Active Launchpads</p>
-            </div>
-            <div class="bg-white rounded-xl card-border shadow-sm p-4 text-center">
-                <div class="text-[28px] font-extrabold text-[#0066FF]">312</div>
-                <p class="text-[13px] text-[#475569]">Items funded</p>
-            </div>
-            <div class="bg-white rounded-xl card-border shadow-sm p-4 text-center">
-                <div class="text-[28px] font-extrabold text-[#0066FF]">1.2K</div>
-                <p class="text-[13px] text-[#475569]">Contributors</p>
-            </div>
-        </div>
+    <div class="max-w-4xl mx-auto px-5 py-8">
+        <h1 class="text-2xl font-bold mb-1">Cornell University</h1>
+        <p class="text-sm text-[#6B6B6B] mb-6">87 active Launchpads · $127K raised</p>
 
         <!-- Trending -->
-        <section class="mb-10">
-            <h2 class="text-xl font-bold mb-4">🔥 Trending at Cornell</h2>
-            <div class="grid md:grid-cols-3 gap-4">
-                <div class="bg-white rounded-xl card-border shadow-sm p-4 flex items-center justify-between">
-                    <div>
-                        <span class="text-[11px] font-semibold text-red-700 bg-red-50 px-2 py-0.5 rounded-full">#1</span>
-                        <p class="font-semibold mt-1">Herman Miller Aeron</p>
-                        <p class="text-xs text-[#475569]">42 Launchpads · $1,195 avg</p>
-                    </div>
-                    <span class="text-2xl">🪑</span>
-                </div>
-                <div class="bg-white rounded-xl card-border shadow-sm p-4 flex items-center justify-between">
-                    <div>
-                        <span class="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">#2</span>
-                        <p class="font-semibold mt-1">LinkedIn Premium</p>
-                        <p class="text-xs text-[#475569]">38 Launchpads · $300 avg</p>
-                    </div>
-                    <span class="text-2xl">💼</span>
-                </div>
-                <div class="bg-white rounded-xl card-border shadow-sm p-4 flex items-center justify-between">
-                    <div>
-                        <span class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">#3</span>
-                        <p class="font-semibold mt-1">Professional Headshots</p>
-                        <p class="text-xs text-[#475569]">31 Launchpads · $350 avg</p>
-                    </div>
-                    <span class="text-2xl">📸</span>
-                </div>
+        <h2 class="font-medium text-sm mb-3">Trending at Cornell</h2>
+        <div class="grid md:grid-cols-3 gap-3 mb-8">
+            <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white">
+                <span class="text-[10px] font-medium text-[#E03030]">#1</span>
+                <p class="font-medium text-sm mt-0.5">Herman Miller Aeron</p>
+                <p class="text-xs text-[#6B6B6B]">42 Launchpads</p>
             </div>
-        </section>
+            <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white">
+                <span class="text-[10px] font-medium text-[#6B6B6B]">#2</span>
+                <p class="font-medium text-sm mt-0.5">LinkedIn Premium</p>
+                <p class="text-xs text-[#6B6B6B]">38 Launchpads</p>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white">
+                <span class="text-[10px] font-medium text-[#6B6B6B]">#3</span>
+                <p class="font-medium text-sm mt-0.5">Professional Headshots</p>
+                <p class="text-xs text-[#6B6B6B]">31 Launchpads</p>
+            </div>
+        </div>
 
-        <!-- Student Launchpads -->
-        <section>
-            <h2 class="text-xl font-bold mb-4">👥 Cornell Launchpads</h2>
-            <div class="space-y-4">
-                <div class="bg-white rounded-2xl card-border shadow-sm p-5 flex flex-col md:flex-row gap-4">
-                    <div class="w-12 h-12 rounded-full bg-[#E8F0FF] flex items-center justify-center text-[#0066FF] font-bold flex-shrink-0">JM</div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-2 flex-wrap mb-0.5">
-                            <h4 class="font-semibold">Jessica M.</h4>
-                            <span class="text-[11px] text-[#475569] bg-gray-100 px-2 py-0.5 rounded-full">ILR '26</span>
-                            <span class="text-[12px] text-[#475569]">→ Marketing Analyst, NYC</span>
-                        </div>
-                        <p class="text-[13px] text-[#475569] mb-2">"The Remote Tech Stack" · 6 items</p>
-                        <div class="chip-in-progress mb-1">
-                            <div class="chip-in-fill" style="width: 52%"></div>
-                        </div>
-                        <div class="flex justify-between text-xs text-[#475569]">
-                            <span>$1,560 raised of $2,990</span>
-                            <span>52% · 14 contributors</span>
-                        </div>
+        <!-- Students -->
+        <h2 class="font-medium text-sm mb-3">Cornell Launchpads</h2>
+        <div class="space-y-3">
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center font-bold text-[#E03030] text-sm flex-shrink-0">JM</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2">
+                        <p class="font-medium text-sm">Jessica M.</p>
+                        <span class="text-[10px] text-[#6B6B6B]">ILR '26</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ Marketing, NYC</span>
                     </div>
-                    <div class="flex items-center">
-                        <a href="/send-gift" class="btn-primary px-4 py-2 text-sm font-semibold rounded-xl">Send Gift</a>
+                    <div class="bar mt-1"><div class="bar-fill" style="width:52%"></div></div>
+                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                        <span>$1,560 raised</span>
+                        <span>52%</span>
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl card-border shadow-sm p-5 flex flex-col md:flex-row gap-4">
-                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold flex-shrink-0">MT</div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-2 flex-wrap mb-0.5">
-                            <h4 class="font-semibold">Marcus T.</h4>
-                            <span class="text-[11px] text-[#475569] bg-gray-100 px-2 py-0.5 rounded-full">Engineering '26</span>
-                            <span class="text-[12px] text-[#475569]">→ Software Engineer, SF</span>
-                        </div>
-                        <p class="text-[13px] text-[#475569] mb-2">"The Wall Street Wardrobe" · 4 items</p>
-                        <div class="chip-in-progress mb-1">
-                            <div class="chip-in-fill" style="width: 31%"></div>
-                        </div>
-                        <div class="flex justify-between text-xs text-[#475569]">
-                            <span>$890 raised of $2,850</span>
-                            <span>31% · 7 contributors</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <a href="/send-gift" class="btn-primary px-4 py-2 text-sm font-semibold rounded-xl">Send Gift</a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-2xl card-border shadow-sm p-5 flex flex-col md:flex-row gap-4">
-                    <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-bold flex-shrink-0">AL</div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-2 flex-wrap mb-0.5">
-                            <h4 class="font-semibold">Aisha L.</h4>
-                            <span class="text-[11px] text-[#475569] bg-gray-100 px-2 py-0.5 rounded-full">A&S '26</span>
-                            <span class="text-[12px] text-[#475569]">→ Consulting, Chicago</span>
-                        </div>
-                        <p class="text-[13px] text-[#475569] mb-2">"The City Starter" · 5 items</p>
-                        <div class="chip-in-progress mb-1">
-                            <div class="chip-in-fill" style="width: 74%"></div>
-                        </div>
-                        <div class="flex justify-between text-xs text-[#475569]">
-                            <span>$785 raised of $1,060</span>
-                            <span>74% · 9 contributors</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <a href="/send-gift" class="btn-primary px-4 py-2 text-sm font-semibold rounded-xl">Send Gift</a>
-                    </div>
-                </div>
+                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
             </div>
-        </section>
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center font-bold text-green-700 text-sm flex-shrink-0">MT</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2">
+                        <p class="font-medium text-sm">Marcus T.</p>
+                        <span class="text-[10px] text-[#6B6B6B]">Engineering '26</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ Software, SF</span>
+                    </div>
+                    <div class="bar mt-1"><div class="bar-fill" style="width:31%"></div></div>
+                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                        <span>$890 raised</span>
+                        <span>31%</span>
+                    </div>
+                </div>
+                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center font-bold text-purple-700 text-sm flex-shrink-0">AL</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2">
+                        <p class="font-medium text-sm">Aisha L.</p>
+                        <span class="text-[10px] text-[#6B6B6B]">A&S '26</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ Consulting, Chicago</span>
+                    </div>
+                    <div class="bar mt-1"><div class="bar-fill" style="width:74%"></div></div>
+                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                        <span>$785 raised</span>
+                        <span>74%</span>
+                    </div>
+                </div>
+                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+            </div>
+        </div>
     </div>
 
-    <footer class="border-t border-[#E2E8F0] py-8 px-4 sm:px-6 lg:px-8 bg-white mt-12">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2.5">
-                <div class="w-7 h-7 rounded-lg bg-[#0066FF] flex items-center justify-center">
-                    <svg width="14" height="14" viewBox="0 0 48 48" fill="none">
-                        <path d="M10 18C10 16.8954 10.8954 16 12 16H36C37.1046 16 38 16.8954 38 18V32C38 33.1046 37.1046 34 36 34H12C10.8954 34 10 33.1046 10 32V18Z" fill="white" opacity="0.3"/>
-                    </svg>
-                </div>
-                <span class="font-bold text-sm">Grad<span class="font-light text-[#0066FF]">Gift</span></span>
+    <footer class="border-t border-[#E8E8E8] py-6 px-5 mt-12 bg-white">
+        <div class="max-w-6xl mx-auto flex items-center justify-between text-xs text-[#6B6B6B]">
+            <span>GradGift</span>
+            <div class="flex gap-4">
+                <a href="/" class="link">Home</a>
+                <a href="/giftlist" class="link">Giftlist</a>
+                <a href="/school" class="link">School</a>
+                <a href="/send-gift" class="link">Send</a>
             </div>
-            <div class="flex gap-6 text-sm text-[#475569]">
-                <a href="/" class="hover:text-[#0066FF]">Home</a>
-                <a href="/giftlist" class="hover:text-[#0066FF]">My Giftlist</a>
-                <a href="/school" class="hover:text-[#0066FF]">My School</a>
-                <a href="/send-gift" class="hover:text-[#0066FF]">Send a Gift</a>
-            </div>
-            <p class="text-[12px] text-[#475569]">© 2026 GradGift.</p>
         </div>
     </footer>
 </body>
