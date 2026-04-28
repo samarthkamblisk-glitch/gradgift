@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <rect x="2" y="2" width="46" height="46" rx="10" stroke="#00B2FF" stroke-width="3" fill="none"/>
+  <path d="M12 18C12 16.8954 12.8954 16 14 16H36C37.1046 16 38 16.8954 38 18V30C38 31.1046 37.1046 32 36 32H14C12.8954 32 12 31.1046 12 30V18Z" stroke="#00B2FF" stroke-width="2" fill="none"/>
+  <path d="M25 16V14M20 14H30" stroke="#00B2FF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M18 22H27M18 26H32" stroke="#00B2FF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M38 25L46 28L51 26" stroke="#00B2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="58" y="32" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#1a1a1a">Grad</text>
+  <text x="110" y="32" font-family="Inter, sans-serif" font-weight="300" font-size="22" fill="#00B2FF">Gift</text>
+</svg>

@@ -1,0 +1,41 @@
+{
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/robots\\.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.svg",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/svg+xml; charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/giftlist/?", "dest": "/giftlist.html" },
+    { "src": "/school/?", "dest": "/school.html" },
+    { "src": "/send-gift/?", "dest": "/send-gift.html" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "cleanUrls": false,
+  "trailingSlash": false
+}
