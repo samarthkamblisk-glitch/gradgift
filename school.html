@@ -28,6 +28,9 @@
         .bar { height: 4px; background: #E8E8E8; border-radius: 2px; overflow: hidden; }
         .bar-fill { height: 100%; background: #E03030; border-radius: 2px; }
         .rank-badge { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+        .ticker { animation: scrollUp 20s linear infinite; }
+        .ticker:hover { animation-play-state: paused; }
+        @keyframes scrollUp { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
     </style>
 </head>
 <body>
@@ -66,34 +69,27 @@
             </div>
         </div>
 
-        <!-- Trending Items (20 items) -->
-        <section class="mb-8">
-            <h2 class="font-medium text-sm mb-3">Things students are asking for</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Office Chair · $500</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">LinkedIn Premium · $300</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Tailored Blazer · $450 <span class="text-[#E03030]">(15% off at BP)</span></div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Flight to Stanford · $350</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Professional Headshots · $350</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Commuter Backpack · $120</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Mechanical Keyboard · $170</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">AirPods Pro · $249 <span class="text-[#E03030]">(Cornell Store)</span></div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Leather Notebook · $45</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Noise-Canceling Headphones · $350</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Textbooks · $200 <span class="text-[#E03030]">(Cornell Store)</span></div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">The Economist Subscription · $150</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Gym Membership (3mo) · $200</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Ironing Steamer · $45</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Leather Work Bag · $350</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Wireless Mouse · $80</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Dress Shoes · $250</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Coffee Maker · $60</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Plant & Pot · $35</div>
-                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">First Week Groceries · $100</div>
+        <!-- Live Activity Feed -->
+        <section class="mb-8 border border-[#E8E8E8] rounded-xl overflow-hidden bg-white">
+            <div class="px-4 py-2 border-b border-[#E8E8E8] flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+                <span class="text-[11px] font-medium">Live activity</span>
             </div>
-        </section>
-
-        <!-- Professor Gifting Feature -->
+            <div class="h-28 overflow-hidden relative">
+                <div class="ticker px-4">
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Samarth K.</span> just asked for a <span class="text-[#E03030]">Tailored Blazer · $450</span></div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Kabeer M.</span> just asked for <span class="text-[#E03030]">LinkedIn Premium · $300</span></div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Jessica H.</span> collected the full amount for her <span class="text-[#E03030]">Commuter Backpack! 🎉</span></div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Himani A.</span> just asked for a <span class="text-[#E03030]">Mechanical Keyboard · $170</span></div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Marcus T.</span> reached <span class="text-[#E03030]">$890 raised</span> for his new job kit 🎉</div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Nikhil B.</span> just asked for <span class="text-[#E03030]">Coffee Maker · $60</span></div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Davian G.</span> just asked for <span class="text-[#E03030]">Dress Shoes · $250</span></div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Sofia K.</span> just asked for <span class="text-[#E03030]">Grad School Textbooks · $200</span></div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Brad T.</span> just sent a gift to <span class="text-[#E03030]">Samarth K.</span> ❤️</div>
+                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Kabeer M.</span> collected the full amount for <span class="text-[#E03030]">Noise-Canceling Headphones! 🎉</span></div>
+                </div>
+            </div>
+        </section>        <!-- Professor Gifting Feature -->
         <section class="mb-8 bg-white border border-[#E8E8E8] rounded-xl p-4">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-700 text-sm flex-shrink-0">BT</div>
