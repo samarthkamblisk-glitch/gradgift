@@ -24,7 +24,13 @@
         .link { color: #6B6B6B; transition: color 0.2s; }
         .link:hover { color: #E03030; }
     
-        </style>
+        
+        .mobile-menu { display: none; flex-direction: column; position: fixed; top: 80px; left: 0; right: 0; background: #FDFBF7; border-bottom: 1px solid #E8E8E8; padding: 20px 24px; gap: 18px; z-index: 40; }
+        .mobile-menu a { font-size: 17px; color: #6B6B6B; font-weight: 500; }
+        .mobile-menu.open { display: flex; }
+        .hamburger { cursor: pointer; padding: 4px; }
+        .hamburger-line { display: block; width: 26px; height: 3px; background: #1A1A1A; margin: 5px 0; border-radius: 1px; transition: 0.2s; }
+    </style>
     <script>
         function toggleNav() {
             document.getElementById("mobile-menu").classList.toggle("open");
