@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ithaca partner shops offering discounts for GradGift users.">
+    <title>Partners | GradGift</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { red: '#E03030', cream: '#FDFBF7', dark: '#1A1A1A', gray: '#6B6B6B', light: '#E8E8E8' },
+                    fontFamily: { sans: ['-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: #FDFBF7; color: #1A1A1A; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        .btn-red { background: #E03030; color: white; transition: opacity 0.2s; }
+        .btn-red:hover { opacity: 0.85; }
+        .link { color: #6B6B6B; transition: color 0.2s; }
+        .link:hover { color: #E03030; }
+    </style>
+</head>
+<body>
+    <nav class="sticky top-0 w-full z-50 bg-[#FDFBF7]/95 backdrop-blur border-b border-[#E8E8E8]/50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-bold text-lg tracking-tight">GradGift</a>
+            <div class="hidden md:flex items-center gap-8 text-base text-[#6B6B6B]">
+                <a href="/giftlist" class="link">My Giftlist</a>
+                <a href="/school" class="link">My School</a>
+                <a href="/partners" class="link" style="color:#E03030">Partners</a>
+                <a href="/send-gift" class="link">Send a Gift</a>
+            </div>
+            <a href="/send-gift" class="btn-red px-5 py-2 text-sm rounded-full">Send a Gift</a>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-6 py-8">
+        <h1 class="text-2xl font-bold mb-1">Ithaca Partners</h1>
+        <p class="text-sm text-[#6B6B6B] mb-6">Local shops offering discounts to GradGift students. Show your Launchpad at checkout.</p>
+
+        <!-- Clothing & Accessories -->
+        <h2 class="font-medium text-sm mb-3">Clothing & Accessories</h2>
+        <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <p class="font-semibold">Benjamin Peters</p>
+                        <p class="text-xs text-[#6B6B6B]">Ithaca Commons</p>
+                    </div>
+                    <span class="text-[#E03030] text-sm font-bold">15% off</span>
+                </div>
+                <p class="text-xs text-[#6B6B6B] leading-relaxed mb-3">Blazers, suits, and dress shoes for your first interview or first day. Menswear shop on the Commons since 2002.</p>
+                <div class="text-xs border-t border-[#E8E8E8] pt-2 mt-1">
+                    <p><span class="font-medium">Example savings:</span> Tailored Blazer $450 → <span class="text-[#E03030] font-medium">$382.50</span></p>
+                    <p><span class="font-medium">Dress Shoes</span> $250 → <span class="text-[#E03030] font-medium">$212.50</span></p>
+                </div>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <p class="font-semibold">Unique Boutique</p>
+                        <p class="text-xs text-[#6B6B6B]">Commons · 215 E State St</p>
+                    </div>
+                    <span class="text-[#E03030] text-sm font-bold">10% off</span>
+                </div>
+                <p class="text-xs text-[#6B6B6B] leading-relaxed mb-3">Formalwear, gowns, suits, and accessories for women. Great for recruiting events and career fairs.</p>
+                <div class="text-xs border-t border-[#E8E8E8] pt-2 mt-1">
+                    <p><span class="font-medium">Example savings:</span> Commuter Backpack $120 → <span class="text-[#E03030] font-medium">$108</span></p>
+                    <p><span class="font-medium">Leather Work Bag</span> $350 → <span class="text-[#E03030] font-medium">$315</span></p>
+                </div>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <p class="font-semibold">Plato's Closet</p>
+                        <p class="text-xs text-[#6B6B6B]">Lansing · 280 E Meadow Dr</p>
+                    </div>
+                    <span class="text-[#E03030] text-sm font-bold">Additional 10%</span>
+                </div>
+                <p class="text-xs text-[#6B6B6B] leading-relaxed mb-3">Gently used professional wear at already low prices. Extra discount on top for GradGift students.</p>
+                <div class="text-xs border-t border-[#E8E8E8] pt-2 mt-1">
+                    <p><span class="font-medium">Example savings:</span> Professional Blazer $35 → <span class="text-[#E03030] font-medium">$31.50</span></p>
+                    <p><span class="font-medium">Dress Shoes</span> $25 → <span class="text-[#E03030] font-medium">$22.50</span></p>
+                </div>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <p class="font-semibold">Angeline's Consignment</p>
+                        <p class="text-xs text-[#6B6B6B]">Commons · 202 E State St</p>
+                    </div>
+                    <span class="text-[#E03030] text-sm font-bold">15% off</span>
+                </div>
+                <p class="text-xs text-[#6B6B6B] leading-relaxed mb-3">High-end consignment shop with designer pieces. Perfect for finding a polished look on a student budget.</p>
+                <div class="text-xs border-t border-[#E8E8E8] pt-2 mt-1">
+                    <p><span class="font-medium">Example savings:</span> Designer Handbag $120 → <span class="text-[#E03030] font-medium">$102</span></p>
+                    <p><span class="font-medium">Silk Blouse</span> $45 → <span class="text-[#E03030] font-medium">$38.25</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech & Office -->
+        <h2 class="font-medium text-sm mb-3">Tech & Office</h2>
+        <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <p class="font-semibold">The Cornell Store</p>
+                        <p class="text-xs text-[#6B6B6B]">Ho Plaza & Commons</p>
+                    </div>
+                    <span class="text-[#E03030] text-sm font-bold">Student pricing</span>
+                </div>
+                <p class="text-xs text-[#6B6B6B] leading-relaxed mb-3">MacBooks, tech, textbooks, and Cornell gear. Already at student prices, plus bonus accessories with GradGift.</p>
+                <div class="text-xs border-t border-[#E8E8E8] pt-2 mt-1">
+                    <p><span class="font-medium">With GradGift:</span> Free sleeve + USB-C adapter on any laptop</p>
+                    <p><span class="font-medium">Free textbook shipping</span> to your new city</p>
+                </div>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <p class="font-semibold">Ithaca Desktop</p>
+                        <p class="text-xs text-[#6B6B6B]">Commons · 108 N Cayuga St</p>
+                    </div>
+                    <span class="text-[#E03030] text-sm font-bold">20% off cables</span>
+                </div>
+                <p class="text-xs text-[#6B6B6B] leading-relaxed mb-3">Custom built PCs, monitors, peripherals, and accessories. Student-run shop popular with engineers.</p>
+                <div class="text-xs border-t border-[#E8E8E8] pt-2 mt-1">
+                    <p><span class="font-medium">Example savings:</span> Mechanical Keyboard $170 → <span class="text-[#E03030] font-medium">$144.50</span></p>
+                    <p><span class="font-medium">Wireless Mouse</span> $80 → <span class="text-[#E03030] font-medium">$68</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cafes & Groceries (starting out) -->
+        <h2 class="font-medium text-sm mb-3">Cafes, Groceries & Daily Needs</h2>
+        <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <p class="font-semibold">Downtown Ithaca Gift Card</p>
+                        <p class="text-xs text-[#6B6B6B]">Redeemable at 100+ locations</p>
+                    </div>
+                    <span class="text-[#E03030] text-sm font-bold">No fees</span>
+                </div>
+                <p class="text-xs text-[#6B6B6B] leading-relaxed mb-3">A single gift card that works at over 100 local shops, cafes, and restaurants on the Ithaca Commons. Cafes, stationery shops, bookstores, and more.</p>
+                <div class="text-xs border-t border-[#E8E8E8] pt-2 mt-1">
+                    <p><span class="font-medium">Worth adding to any Launchpad</span></p>
+                    <p>Use at: Gimme Coffee, Buffalo Street Books, Autumn Leaves Books, Collegetown Bagels</p>
+                </div>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <p class="font-semibold">Purity Ice Cream & Provisions</p>
+                        <p class="text-xs text-[#6B6B6B]">Commons · 410 College Ave</p>
+                    </div>
+                    <span class="text-[#E03030] text-sm font-bold">10% off</span>
+                </div>
+                <p class="text-xs text-[#6B6B6B] leading-relaxed mb-3">A classic Ithaca spot for groceries, prepared meals, and ice cream (obviously). GradGift students get 10% off. Also has some local produce and meat.</p>
+                <div class="text-xs border-t border-[#E8E8E8] pt-2 mt-1">
+                    <p><span class="font-medium">Example savings:</span> First Week Groceries $100 → <span class="text-[#E03030] font-medium">$90</span></p>
+                    <p>Also popular as a gift item students add to their Launchpad</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How it works -->
+        <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
+            <h2 class="font-medium text-sm mb-2">How it works</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-xs text-[#6B6B6B]">
+                <div>
+                    <span class="text-[#E03030] font-bold text-sm">1</span>
+                    <p class="font-medium text-dark mt-1">Create your Launchpad</p>
+                    <p>Add items you need from any of our partner shops.</p>
+                </div>
+                <div>
+                    <span class="text-[#E03030] font-bold text-sm">2</span>
+                    <p class="font-medium text-dark mt-1">Get funded</p>
+                    <p>Friends and family chip in. Money goes to the shop directly.</p>
+                </div>
+                <div>
+                    <span class="text-[#E03030] font-bold text-sm">3</span>
+                    <p class="font-medium text-dark mt-1">Shop with your discount</p>
+                    <p>Show your Launchpad at checkout to get the partner discount.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-[#E8E8E8] py-8 px-6 mt-12 bg-white">
+        <div class="max-w-6xl mx-auto flex items-center justify-between text-xs text-[#6B6B6B]">
+            <span class="text-sm font-semibold">GradGift</span>
+            <div class="flex gap-6 text-sm">
+                <a href="/" class="link">Home</a>
+                <a href="/giftlist" class="link">Giftlist</a>
+                <a href="/school" class="link">School</a>
+                <a href="/partners" class="link">Partners</a>
+                <a href="/send-gift" class="link">Send</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

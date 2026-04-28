@@ -28,7 +28,7 @@
         .bar { height: 4px; background: #E8E8E8; border-radius: 2px; overflow: hidden; }
         .bar-fill { height: 100%; background: #E03030; border-radius: 2px; }
         .rank-badge { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; font-size: 10px; font-weight: 700; flex-shrink: 0; }
-        .ticker { animation: scrollUp 20s linear infinite; }
+        .ticker { animation: scrollUp 25s linear infinite; }
         .ticker:hover { animation-play-state: paused; }
         @keyframes scrollUp { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
     </style>
@@ -40,199 +40,179 @@
             <div class="hidden md:flex items-center gap-8 text-base text-[#6B6B6B]">
                 <a href="/giftlist" class="link">My Giftlist</a>
                 <a href="/school" class="link" style="color:#E03030">My School</a>
+                <a href="/partners" class="link">Partners</a>
                 <a href="/send-gift" class="link">Send a Gift</a>
             </div>
             <a href="/send-gift" class="btn-red px-5 py-2 text-sm rounded-full">Send a Gift</a>
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto px-6 py-8">
-        <h1 class="text-2xl font-bold mb-1">Cornell University</h1>
-        <p class="text-sm text-[#6B6B6B] mb-6">87 active Launchpads · $4,800 raised</p>
+    <div class="max-w-6xl mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Main Content -->
+            <div class="flex-1 min-w-0">
+                <h1 class="text-2xl font-bold mb-1">Cornell University</h1>
+                <p class="text-sm text-[#6B6B6B] mb-6">87 active Launchpads · $4,800 raised</p>
 
-        <!-- Leaderboard cards -->
-        <div class="grid grid-cols-3 gap-3 mb-8">
-            <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white text-center">
-                <p class="text-[10px] text-[#6B6B6B]">Closest to goal</p>
-                <p class="text-sm font-bold text-[#E03030]">Jessica H.</p>
-                <p class="text-xs">65% funded</p>
-            </div>
-            <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white text-center">
-                <p class="text-[10px] text-[#6B6B6B]">Highest raised</p>
-                <p class="text-sm font-bold text-blue-700">Marcus T.</p>
-                <p class="text-xs">$890 raised for new job kit</p>
-            </div>
-            <div class="border border-amber-200 rounded-xl p-3 bg-amber-50/50 text-center">
-                <p class="text-[10px] text-[#6B6B6B]">Most generous</p>
-                <p class="text-sm font-bold text-amber-700">Brad T.</p>
-                <p class="text-xs">Professor · Sent 7 gifts</p>
-            </div>
-        </div>
+                <!-- Leaderboard cards -->
+                <div class="grid grid-cols-3 gap-3 mb-8">
+                    <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white text-center">
+                        <p class="text-[10px] text-[#6B6B6B]">Closest to goal</p>
+                        <p class="text-sm font-bold text-[#E03030]">Jessica H.</p>
+                        <p class="text-xs">65% funded</p>
+                    </div>
+                    <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white text-center">
+                        <p class="text-[10px] text-[#6B6B6B]">Highest raised</p>
+                        <p class="text-sm font-bold text-blue-700">Marcus T.</p>
+                        <p class="text-xs">$890 raised for new job kit</p>
+                    </div>
+                    <div class="border border-amber-200 rounded-xl p-3 bg-amber-50/50 text-center">
+                        <p class="text-[10px] text-[#6B6B6B]">Most generous</p>
+                        <p class="text-sm font-bold text-amber-700">Brad T.</p>
+                        <p class="text-xs">Professor · Sent 7 gifts</p>
+                    </div>
+                </div>
 
-        <!-- Live Activity Feed -->
-        <section class="mb-8 border border-[#E8E8E8] rounded-xl overflow-hidden bg-white">
-            <div class="px-4 py-2 border-b border-[#E8E8E8] flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-                <span class="text-[11px] font-medium">Live activity</span>
-            </div>
-            <div class="h-28 overflow-hidden relative">
-                <div class="ticker px-4">
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Samarth K.</span> just asked for a <span class="text-[#E03030]">Tailored Blazer · $450</span></div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Kabeer M.</span> just asked for <span class="text-[#E03030]">LinkedIn Premium · $300</span></div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Jessica H.</span> collected the full amount for her <span class="text-[#E03030]">Commuter Backpack! 🎉</span></div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Himani A.</span> just asked for a <span class="text-[#E03030]">Mechanical Keyboard · $170</span></div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Marcus T.</span> reached <span class="text-[#E03030]">$890 raised</span> for his new job kit 🎉</div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Nikhil B.</span> just asked for <span class="text-[#E03030]">Coffee Maker · $60</span></div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Davian G.</span> just asked for <span class="text-[#E03030]">Dress Shoes · $250</span></div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Sofia K.</span> just asked for <span class="text-[#E03030]">Grad School Textbooks · $200</span></div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Brad T.</span> just sent a gift to <span class="text-[#E03030]">Samarth K.</span> ❤️</div>
-                    <div class="py-2 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Kabeer M.</span> collected the full amount for <span class="text-[#E03030]">Noise-Canceling Headphones! 🎉</span></div>
+                <!-- Cornell Launchpad Leaderboard -->
+                <h2 class="font-medium text-sm mb-3">Cornell Launchpad Leaderboard</h2>
+                <p class="text-xs text-[#6B6B6B] mb-3">Ranked by closest to fully funded.</p>
+                <div class="space-y-3">
+                    <!-- #1 Jessica H. -->
+                    <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                        <div class="rank-badge bg-[#E03030]/10 text-[#E03030]">1</div>
+                        <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center font-bold text-[#E03030] text-sm flex-shrink-0">JH</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2">
+                                <p class="font-medium text-sm">Jessica H.</p>
+                                <span class="text-[10px] text-[#6B6B6B]">PhD '26</span>
+                                <span class="text-[10px] text-[#6B6B6B]">→ Post-Doc, Netherlands</span>
+                            </div>
+                            <p class="text-[10px] text-[#6B6B6B] mb-1">Flight · Research Supplies · Headphones</p>
+                            <div class="bar"><div class="bar-fill" style="width:65%"></div></div>
+                            <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                                <span>$235 raised of $360</span><span>65%</span>
+                            </div>
+                        </div>
+                        <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+                    </div>
+                    <!-- #2 Himani A. -->
+                    <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                        <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">2</div>
+                        <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center font-bold text-purple-700 text-sm flex-shrink-0">HA</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2">
+                                <p class="font-medium text-sm">Himani A.</p>
+                                <span class="text-[10px] text-[#6B6B6B]">Engineering '26</span>
+                                <span class="text-[10px] text-[#6B6B6B]">→ Software, Seattle</span>
+                            </div>
+                            <p class="text-[10px] text-[#6B6B6B] mb-1">Mechanical Keyboard · Headphones · Wireless Mouse</p>
+                            <div class="bar"><div class="bar-fill" style="width:52%"></div></div>
+                            <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                                <span>$310 raised of $600</span><span>52%</span>
+                            </div>
+                        </div>
+                        <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+                    </div>
+                    <!-- #3 Sofia K. -->
+                    <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                        <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">3</div>
+                        <div class="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center font-bold text-teal-700 text-sm flex-shrink-0">SK</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2">
+                                <p class="font-medium text-sm">Sofia K.</p>
+                                <span class="text-[10px] text-[#6B6B6B]">CALS '26</span>
+                                <span class="text-[10px] text-[#6B6B6B]">→ Master's, Stanford</span>
+                            </div>
+                            <p class="text-[10px] text-[#6B6B6B] mb-1">Flight · Textbooks · Ironing Steamer · Plant & Pot</p>
+                            <div class="bar"><div class="bar-fill" style="width:47%"></div></div>
+                            <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                                <span>$305 raised of $645</span><span>47%</span>
+                            </div>
+                        </div>
+                        <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+                    </div>
+                    <!-- #4 Samarth K. -->
+                    <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                        <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">4</div>
+                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center font-bold text-blue-700 text-sm flex-shrink-0">SK</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2">
+                                <p class="font-medium text-sm">Samarth K.</p>
+                                <span class="text-[10px] text-[#6B6B6B]">MILR '26</span>
+                                <span class="text-[10px] text-[#6B6B6B]">→ HR, Amazon</span>
+                            </div>
+                            <p class="text-[10px] text-[#6B6B6B] mb-1">Tailored Blazer · Headshots · Dress Shoes</p>
+                            <div class="bar"><div class="bar-fill" style="width:41%"></div></div>
+                            <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                                <span>$430 raised of $1,050</span><span>41%</span>
+                            </div>
+                        </div>
+                        <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+                    </div>
+                    <!-- #5 Davian G. -->
+                    <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                        <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">5</div>
+                        <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center font-bold text-green-700 text-sm flex-shrink-0">DG</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2">
+                                <p class="font-medium text-sm">Davian G.</p>
+                                <span class="text-[10px] text-[#6B6B6B]">A&S '26</span>
+                                <span class="text-[10px] text-[#6B6B6B]">→ Finance, NYC</span>
+                            </div>
+                            <p class="text-[10px] text-[#6B6B6B] mb-1">Tailored Blazer · Leather Bag · Dress Shoes</p>
+                            <div class="bar"><div class="bar-fill" style="width:33%"></div></div>
+                            <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                                <span>$345 raised of $1,050</span><span>33%</span>
+                            </div>
+                        </div>
+                        <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+                    </div>
+                    <!-- #6 Nikhil B. -->
+                    <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                        <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">6</div>
+                        <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center font-bold text-rose-700 text-sm flex-shrink-0">NB</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2">
+                                <p class="font-medium text-sm">Nikhil B.</p>
+                                <span class="text-[10px] text-[#6B6B6B]">Engineering '26</span>
+                                <span class="text-[10px] text-[#6B6B6B]">→ Product, SF</span>
+                            </div>
+                            <p class="text-[10px] text-[#6B6B6B] mb-1">AirPods Pro · Coffee Maker · Wireless Mouse</p>
+                            <div class="bar"><div class="bar-fill" style="width:21%"></div></div>
+                            <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                                <span>$80 raised of $389</span><span>21%</span>
+                            </div>
+                        </div>
+                        <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+                    </div>
                 </div>
             </div>
-        </section>        <!-- Professor Gifting Feature -->
-        <section class="mb-8 bg-white border border-[#E8E8E8] rounded-xl p-4">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-700 text-sm flex-shrink-0">BT</div>
-                <div>
-                    <p class="font-medium text-sm">Brad T. <span class="text-[10px] text-[#6B6B6B] font-normal">· Professor, Economics</span></p>
-                    <p class="text-xs text-[#6B6B6B]">"Sent a gift to Samarth K. - one of my sharpest students. Excited for him."</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Local Partners -->
-        <section class="mb-8">
-            <h2 class="font-medium text-sm mb-3">Partner shops in Ithaca</h2>
-            <div class="grid md:grid-cols-3 gap-3 text-xs">
-                <div class="border border-[#E8E8E8] rounded-lg p-3 bg-white">
-                    <p class="font-medium text-xs">Benjamin Peters</p>
-                    <p class="text-[10px] text-[#6B6B6B]">Ithaca Commons</p>
-                    <p class="text-[10px]">Blazers, suits, dress shoes. <span class="text-[#E03030] font-medium">15% off</span> with GradGift.</p>
-                </div>
-                <div class="border border-[#E8E8E8] rounded-lg p-3 bg-white">
-                    <p class="font-medium text-xs">The Cornell Store</p>
-                    <p class="text-[10px] text-[#6B6B6B]">Campus & Commons</p>
-                    <p class="text-[10px]">Tech, textbooks, supplies. <span class="text-[#E03030] font-medium">Student pricing</span> + extras.</p>
-                </div>
-                <div class="border border-[#E8E8E8] rounded-lg p-3 bg-white">
-                    <p class="font-medium text-xs">Downtown Ithaca Gift Card</p>
-                    <p class="text-[10px] text-[#6B6B6B]">100+ local businesses</p>
-                    <p class="text-[10px]">Use at cafes, shops, and restaurants on the Commons.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cornell Launchpad Leaderboard (ranked by % funded) -->
-        <h2 class="font-medium text-sm mb-3">Cornell Launchpad Leaderboard</h2>
-        <p class="text-xs text-[#6B6B6B] mb-3">Ranked by closest to fully funded.</p>
-        <div class="space-y-3">
-            <!-- #1 Jessica H. - 65% -->
-            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="rank-badge bg-[#E03030]/10 text-[#E03030]">1</div>
-                <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center font-bold text-[#E03030] text-sm flex-shrink-0">JH</div>
-                <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Jessica H.</p>
-                        <span class="text-[10px] text-[#6B6B6B]">PhD '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ Post-Doc, Netherlands</span>
+            <!-- Right Column - Live Activity Feed -->
+            <div class="md:w-72 flex-shrink-0">
+                <div class="sticky top-24 border border-[#E8E8E8] rounded-xl overflow-hidden bg-white">
+                    <div class="px-4 py-2.5 border-b border-[#E8E8E8] flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
+                        <span class="text-xs font-medium">Live activity</span>
                     </div>
-                    <p class="text-[10px] text-[#6B6B6B] mb-1">Flight · Research Supplies · Headphones</p>
-                    <div class="bar"><div class="bar-fill" style="width:65%"></div></div>
-                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$235 raised of $360</span><span>65%</span>
+                    <div class="h-80 overflow-hidden relative">
+                        <div class="ticker px-4">
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Samarth K.</span> just asked for a <span class="text-[#E03030]">Tailored Blazer · $450</span></div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Kabeer M.</span> just asked for <span class="text-[#E03030]">LinkedIn Premium · $300</span></div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Jessica H.</span> collected the full amount for her <span class="text-[#E03030]">Commuter Backpack! 🎉</span></div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Himani A.</span> just asked for a <span class="text-[#E03030]">Mechanical Keyboard · $170</span></div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Marcus T.</span> reached <span class="text-[#E03030]">$890 raised</span> for his new job kit 🎉</div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Nikhil B.</span> just asked for <span class="text-[#E03030]">Coffee Maker · $60</span></div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Davian G.</span> just asked for <span class="text-[#E03030]">Dress Shoes · $250</span></div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Sofia K.</span> just asked for <span class="text-[#E03030]">Grad School Textbooks · $200</span></div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Brad T.</span> just sent a gift to <span class="text-[#E03030]">Samarth K.</span> ❤️</div>
+                            <div class="py-2.5 border-b border-[#E8E8E8]/50 text-xs"><span class="font-medium">Kabeer M.</span> collected the full amount for <span class="text-[#E03030]">Noise-Canceling Headphones! 🎉</span></div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-2 border-t border-[#E8E8E8] bg-gray-50/50">
+                        <a href="/partners" class="text-[10px] text-[#E03030] font-medium">View partner shops →</a>
                     </div>
                 </div>
-                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
-            </div>
-            <!-- #2 Himani A. - 52% -->
-            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">2</div>
-                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center font-bold text-purple-700 text-sm flex-shrink-0">HA</div>
-                <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Himani A.</p>
-                        <span class="text-[10px] text-[#6B6B6B]">Engineering '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ Software, Seattle</span>
-                    </div>
-                    <p class="text-[10px] text-[#6B6B6B] mb-1">Mechanical Keyboard · Headphones · Wireless Mouse</p>
-                    <div class="bar"><div class="bar-fill" style="width:52%"></div></div>
-                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$310 raised of $600</span><span>52%</span>
-                    </div>
-                </div>
-                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
-            </div>
-            <!-- #3 Sofia K. - 47% -->
-            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">3</div>
-                <div class="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center font-bold text-teal-700 text-sm flex-shrink-0">SK</div>
-                <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Sofia K.</p>
-                        <span class="text-[10px] text-[#6B6B6B]">CALS '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ Master's, Stanford</span>
-                    </div>
-                    <p class="text-[10px] text-[#6B6B6B] mb-1">Flight · Textbooks · Ironing Steamer · Plant & Pot</p>
-                    <div class="bar"><div class="bar-fill" style="width:47%"></div></div>
-                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$305 raised of $645</span><span>47%</span>
-                    </div>
-                </div>
-                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
-            </div>
-            <!-- #4 Samarth K. - 41% -->
-            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">4</div>
-                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center font-bold text-blue-700 text-sm flex-shrink-0">SK</div>
-                <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Samarth K.</p>
-                        <span class="text-[10px] text-[#6B6B6B]">MILR '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ HR, Amazon</span>
-                    </div>
-                    <p class="text-[10px] text-[#6B6B6B] mb-1">Tailored Blazer · Headshots · Dress Shoes</p>
-                    <div class="bar"><div class="bar-fill" style="width:41%"></div></div>
-                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$430 raised of $1,050</span><span>41%</span>
-                    </div>
-                </div>
-                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
-            </div>
-            <!-- #5 Davian G. - 33% -->
-            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">5</div>
-                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center font-bold text-green-700 text-sm flex-shrink-0">DG</div>
-                <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Davian G.</p>
-                        <span class="text-[10px] text-[#6B6B6B]">A&S '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ Finance, NYC</span>
-                    </div>
-                    <p class="text-[10px] text-[#6B6B6B] mb-1">Tailored Blazer · Leather Bag · Dress Shoes</p>
-                    <div class="bar"><div class="bar-fill" style="width:33%"></div></div>
-                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$345 raised of $1,050</span><span>33%</span>
-                    </div>
-                </div>
-                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
-            </div>
-            <!-- #6 Nikhil B. - 21% -->
-            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="rank-badge bg-[#6B6B6B]/10 text-[#6B6B6B]">6</div>
-                <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center font-bold text-rose-700 text-sm flex-shrink-0">NB</div>
-                <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Nikhil B.</p>
-                        <span class="text-[10px] text-[#6B6B6B]">Engineering '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ Product, SF</span>
-                    </div>
-                    <p class="text-[10px] text-[#6B6B6B] mb-1">AirPods Pro · Coffee Maker · Wireless Mouse</p>
-                    <div class="bar"><div class="bar-fill" style="width:21%"></div></div>
-                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$80 raised of $389</span><span>21%</span>
-                    </div>
-                </div>
-                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
             </div>
         </div>
     </div>
@@ -244,6 +224,7 @@
                 <a href="/" class="link">Home</a>
                 <a href="/giftlist" class="link">Giftlist</a>
                 <a href="/school" class="link">School</a>
+                <a href="/partners" class="link">Partners</a>
                 <a href="/send-gift" class="link">Send</a>
             </div>
         </div>
