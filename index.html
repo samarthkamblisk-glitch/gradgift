@@ -31,6 +31,13 @@
         .link:hover { color: #E03030; }
         .bar { height: 4px; background: #E8E8E8; border-radius: 2px; overflow: hidden; }
         .bar-fill { height: 100%; background: #E03030; border-radius: 2px; }
+        /* Mobile nav */
+        #nav-toggle { display: none; }
+        #nav-toggle:checked ~ .mobile-menu { display: flex; }
+        .hamburger { cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 20px; height: 2px; background: #1A1A1A; margin: 4px 0; border-radius: 1px; transition: 0.2s; }
+        .mobile-menu { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: #FDFBF7; border-bottom: 1px solid #E8E8E8; padding: 16px 24px; gap: 16px; z-index: 40; }
+        .mobile-menu a { font-size: 15px; color: #6B6B6B; font-weight: 500; }
     </style>
 </head>
 <body>
@@ -39,12 +46,25 @@
     <nav class="fixed top-0 w-full z-50 bg-[#FDFBF7]/95 backdrop-blur border-b border-[#E8E8E8]/50">
         <div class="max-w-6xl mx-auto h-16 flex items-center justify-between">
             <a href="/" class="font-bold text-lg tracking-tight ml-6">GradGift</a>
+            <input type="checkbox" id="nav-toggle" class="menu-toggle">
+            <label for="nav-toggle" class="md:hidden hamburger ml-auto mr-4">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <div class="hidden md:flex items-center gap-8 text-base text-[#6B6B6B] mr-6">
                 <a href="/giftlist" class="link">My Giftlist</a>
                 <a href="/school" class="link">My School</a>
                 <a href="/partners" class="link">Partners</a>                
             </div>
-            <a href="/send-gift" class="btn-red px-5 py-2 text-sm rounded-full">Send a Gift</a>
+            <a href="/send-gift" class="btn-red px-5 py-2 text-sm rounded-full hidden md:inline-block">Send a Gift</a>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="/giftlist">My Giftlist</a>
+            <a href="/school">My School</a>
+            <a href="/partners">Partners</a>
+            <a href="/send-gift" style="color:#E03030; font-weight:600">Send a Gift</a>
         </div>
     </nav>
 
