@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="See what Cornell seniors are asking for on GradGift.">
+    <meta name="description" content="See what Cornell students are asking for on GradGift.">
     <title>My School | GradGift</title>
     <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,89 +30,161 @@
     </style>
 </head>
 <body>
-    <nav class="sticky top-0 w-full z-50 bg-[#FDFBF7]/90 backdrop-blur border-b border-[#E8E8E8]/50">
-        <div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
-            <a href="/" class="font-semibold text-sm tracking-tight">GradGift</a>
-            <div class="hidden md:flex items-center gap-6 text-sm text-[#6B6B6B]">
+    <nav class="sticky top-0 w-full z-50 bg-[#FDFBF7]/95 backdrop-blur border-b border-[#E8E8E8]/50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-bold text-base tracking-tight">GradGift</a>
+            <div class="hidden md:flex items-center gap-8 text-base text-[#6B6B6B]">
                 <a href="/giftlist" class="link">My Giftlist</a>
                 <a href="/school" class="link" style="color:#E03030">My School</a>
                 <a href="/send-gift" class="link">Send a Gift</a>
             </div>
-            <a href="/send-gift" class="btn-red px-4 py-1.5 text-sm rounded-full">Send a Gift</a>
+            <a href="/send-gift" class="btn-red px-5 py-2 text-sm rounded-full">Send a Gift</a>
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto px-5 py-8">
+    <div class="max-w-4xl mx-auto px-6 py-8">
         <h1 class="text-2xl font-bold mb-1">Cornell University</h1>
         <p class="text-sm text-[#6B6B6B] mb-6">87 active Launchpads · $127K raised</p>
 
-        <!-- Trending -->
-        <h2 class="font-medium text-sm mb-3">Trending at Cornell</h2>
-        <div class="grid md:grid-cols-3 gap-3 mb-8">
-            <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white">
-                <span class="text-[10px] font-medium text-[#E03030]">#1</span>
-                <p class="font-medium text-sm mt-0.5">Herman Miller Aeron</p>
-                <p class="text-xs text-[#6B6B6B]">42 Launchpads</p>
+        <!-- Trending Items (20 items spread across students) -->
+        <section class="mb-8">
+            <h2 class="font-medium text-sm mb-3">Things students are asking for</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Office Chair · $500</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">LinkedIn Premium · $300</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Tailored Blazer · $450</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">MacBook Air · $999</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Professional Headshots · $350</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Commuter Backpack · $120</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Mechanical Keyboard · $170</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">AirPods Pro · $249</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Standing Desk Converter · $350</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Noise-Canceling Headphones · $350</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Personal Finance Course · $200</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Subscription to The Economist · $150</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Gym Membership (1yr) · $600</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Ironing Steamer · $45</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Leather Work Bag · $350</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Wireless Mouse · $80</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Dress Shoes · $250</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Ring Light & Webcam · $130</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">Monitors (2-pack) · $500</div>
+                <div class="border border-[#E8E8E8] rounded-lg p-2.5 bg-white">First Apartment Cookware Set · $200</div>
             </div>
-            <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white">
-                <span class="text-[10px] font-medium text-[#6B6B6B]">#2</span>
-                <p class="font-medium text-sm mt-0.5">LinkedIn Premium</p>
-                <p class="text-xs text-[#6B6B6B]">38 Launchpads</p>
+        </section>
+
+        <!-- Professor Gifting Feature -->
+        <section class="mb-8 bg-white border border-[#E8E8E8] rounded-xl p-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-700 text-sm flex-shrink-0">BT</div>
+                <div>
+                    <p class="font-medium text-sm">Brad T. <span class="text-[10px] text-[#6B6B6B] font-normal">— Professor, Economics</span></p>
+                    <p class="text-xs text-[#6B6B6B]">"Sent a gift to Jessica H. — my top student this year. Proud of her."</p>
+                </div>
             </div>
-            <div class="border border-[#E8E8E8] rounded-xl p-3 bg-white">
-                <span class="text-[10px] font-medium text-[#6B6B6B]">#3</span>
-                <p class="font-medium text-sm mt-0.5">Professional Headshots</p>
-                <p class="text-xs text-[#6B6B6B]">31 Launchpads</p>
-            </div>
-        </div>
+        </section>
 
         <!-- Students -->
         <h2 class="font-medium text-sm mb-3">Cornell Launchpads</h2>
         <div class="space-y-3">
+            <!-- Jessica H. -->
             <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center font-bold text-[#E03030] text-sm flex-shrink-0">JM</div>
+                <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center font-bold text-[#E03030] text-sm flex-shrink-0">JH</div>
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Jessica M.</p>
+                        <p class="font-medium text-sm">Jessica H.</p>
                         <span class="text-[10px] text-[#6B6B6B]">ILR '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ Marketing, NYC</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ HR, NYC</span>
                     </div>
-                    <div class="bar mt-1"><div class="bar-fill" style="width:52%"></div></div>
+                    <p class="text-[10px] text-[#6B6B6B] mb-1">Office Chair · LinkedIn Premium · Commuter Backpack · Dress Shoes</p>
+                    <div class="bar"><div class="bar-fill" style="width:65%"></div></div>
                     <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$1,560 raised</span>
-                        <span>52%</span>
+                        <span>$975 raised</span><span>65%</span>
                     </div>
                 </div>
                 <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
             </div>
+            <!-- Samarth K. -->
             <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center font-bold text-green-700 text-sm flex-shrink-0">MT</div>
+                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center font-bold text-blue-700 text-sm flex-shrink-0">SK</div>
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Marcus T.</p>
+                        <p class="font-medium text-sm">Samarth K.</p>
+                        <span class="text-[10px] text-[#6B6B6B]">MILR '26</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ People Analytics, NYC</span>
+                    </div>
+                    <p class="text-[10px] text-[#6B6B6B] mb-1">MacBook Air · Standing Desk · Professional Headshots · The Economist</p>
+                    <div class="bar"><div class="bar-fill" style="width:41%"></div></div>
+                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                        <span>$1,050 raised</span><span>41%</span>
+                    </div>
+                </div>
+                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+            </div>
+            <!-- Himani A. -->
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center font-bold text-purple-700 text-sm flex-shrink-0">HA</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2">
+                        <p class="font-medium text-sm">Himani A.</p>
                         <span class="text-[10px] text-[#6B6B6B]">Engineering '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ Software, SF</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ Software, Seattle</span>
                     </div>
-                    <div class="bar mt-1"><div class="bar-fill" style="width:31%"></div></div>
+                    <p class="text-[10px] text-[#6B6B6B] mb-1">Mechanical Keyboard · Monitors (2) · Noise-Canceling Headphones · Standing Desk</p>
+                    <div class="bar"><div class="bar-fill" style="width:52%"></div></div>
                     <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$890 raised</span>
-                        <span>31%</span>
+                        <span>$795 raised</span><span>52%</span>
                     </div>
                 </div>
                 <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
             </div>
+            <!-- Davian G. -->
             <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center font-bold text-purple-700 text-sm flex-shrink-0">AL</div>
+                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center font-bold text-green-700 text-sm flex-shrink-0">DG</div>
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Aisha L.</p>
+                        <p class="font-medium text-sm">Davian G.</p>
                         <span class="text-[10px] text-[#6B6B6B]">A&S '26</span>
-                        <span class="text-[10px] text-[#6B6B6B]">→ Consulting, Chicago</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ Finance, NYC</span>
                     </div>
-                    <div class="bar mt-1"><div class="bar-fill" style="width:74%"></div></div>
+                    <p class="text-[10px] text-[#6B6B6B] mb-1">Tailored Blazer · Leather Work Bag · Dress Shoes · LinkedIn Premium</p>
+                    <div class="bar"><div class="bar-fill" style="width:33%"></div></div>
                     <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
-                        <span>$785 raised</span>
-                        <span>74%</span>
+                        <span>$495 raised</span><span>33%</span>
+                    </div>
+                </div>
+                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+            </div>
+            <!-- Nikhil B. -->
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center font-bold text-rose-700 text-sm flex-shrink-0">NB</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2">
+                        <p class="font-medium text-sm">Nikhil B.</p>
+                        <span class="text-[10px] text-[#6B6B6B]">Engineering '26</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ Product, SF</span>
+                    </div>
+                    <p class="text-[10px] text-[#6B6B6B] mb-1">MacBook Air · Wireless Mouse · AirPods Pro · Ironing Steamer</p>
+                    <div class="bar"><div class="bar-fill" style="width:21%"></div></div>
+                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                        <span>$310 raised</span><span>21%</span>
+                    </div>
+                </div>
+                <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
+            </div>
+            <!-- Sofia K. -->
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center font-bold text-teal-700 text-sm flex-shrink-0">SK</div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2">
+                        <p class="font-medium text-sm">Sofia K.</p>
+                        <span class="text-[10px] text-[#6B6B6B]">CALS '26</span>
+                        <span class="text-[10px] text-[#6B6B6B]">→ Consulting, Boston</span>
+                    </div>
+                    <p class="text-[10px] text-[#6B6B6B] mb-1">Gym Membership · Cookware Set · Ring Light & Webcam · Personal Finance Course</p>
+                    <div class="bar"><div class="bar-fill" style="width:47%"></div></div>
+                    <div class="flex justify-between text-[10px] text-[#6B6B6B] mt-0.5">
+                        <span>$550 raised</span><span>47%</span>
                     </div>
                 </div>
                 <a href="/send-gift" class="btn-outline px-3 py-1 text-xs rounded-full flex-shrink-0">Send Gift</a>
@@ -120,10 +192,10 @@
         </div>
     </div>
 
-    <footer class="border-t border-[#E8E8E8] py-6 px-5 mt-12 bg-white">
+    <footer class="border-t border-[#E8E8E8] py-8 px-6 mt-12 bg-white">
         <div class="max-w-6xl mx-auto flex items-center justify-between text-xs text-[#6B6B6B]">
-            <span>GradGift</span>
-            <div class="flex gap-4">
+            <span class="text-sm font-semibold">GradGift</span>
+            <div class="flex gap-6 text-sm">
                 <a href="/" class="link">Home</a>
                 <a href="/giftlist" class="link">Giftlist</a>
                 <a href="/school" class="link">School</a>

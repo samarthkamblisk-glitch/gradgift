@@ -30,19 +30,19 @@
     </style>
 </head>
 <body>
-    <nav class="sticky top-0 w-full z-50 bg-[#FDFBF7]/90 backdrop-blur border-b border-[#E8E8E8]/50">
-        <div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
-            <a href="/" class="font-semibold text-sm tracking-tight">GradGift</a>
-            <div class="hidden md:flex items-center gap-6 text-sm text-[#6B6B6B]">
+    <nav class="sticky top-0 w-full z-50 bg-[#FDFBF7]/95 backdrop-blur border-b border-[#E8E8E8]/50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-bold text-base tracking-tight">GradGift</a>
+            <div class="hidden md:flex items-center gap-8 text-base text-[#6B6B6B]">
                 <a href="/giftlist" class="link">My Giftlist</a>
                 <a href="/school" class="link">My School</a>
                 <a href="/send-gift" class="link" style="color:#E03030">Send a Gift</a>
             </div>
-            <a href="/send-gift" class="btn-red px-4 py-1.5 text-sm rounded-full">Send a Gift</a>
+            <a href="/send-gift" class="btn-red px-5 py-2 text-sm rounded-full">Send a Gift</a>
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto px-5 py-8">
+    <div class="max-w-4xl mx-auto px-6 py-8">
         <h1 class="text-2xl font-bold mb-1">Send a Gift</h1>
         <p class="text-sm text-[#6B6B6B] mb-6">Find a graduate and chip in toward their career essentials.</p>
 
@@ -51,7 +51,8 @@
             <div class="flex gap-3">
                 <input type="text" placeholder="Search by name..." class="flex-1 border border-[#E8E8E8] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#1A1A1A]">
                 <select class="border border-[#E8E8E8] rounded-lg px-3 py-2 text-sm text-[#6B6B6B] focus:outline-none">
-                    <option>Cornell</option>
+                    <option>All Schools</option>
+                    <option selected>Cornell</option>
                     <option>Stanford</option>
                     <option>Harvard</option>
                 </select>
@@ -59,47 +60,70 @@
             </div>
         </div>
 
-        <!-- Featured -->
+        <!-- Featured Students -->
         <div class="space-y-3 mb-8">
             <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center font-bold text-[#E03030] text-sm flex-shrink-0">JM</div>
+                <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center font-bold text-[#E03030] text-sm flex-shrink-0">JH</div>
                 <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Jessica M.</p>
-                        <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full">Cornell '26</span>
-                    </div>
-                    <p class="text-xs text-[#6B6B6B]">Marketing Analyst, NYC · 6 items on her Launchpad</p>
+                    <p class="font-medium text-sm">Jessica H. <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full font-normal">Cornell '26</span></p>
+                    <p class="text-xs text-[#6B6B6B]">Office Chair · LinkedIn Premium · Commuter Backpack</p>
                 </div>
                 <a href="/giftlist" class="btn-red px-3 py-1.5 text-xs rounded-full flex-shrink-0">Chip In</a>
             </div>
             <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center font-bold text-green-700 text-sm flex-shrink-0">MT</div>
+                <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center font-bold text-blue-700 text-sm flex-shrink-0">SK</div>
                 <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Marcus T.</p>
-                        <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full">Cornell '26</span>
-                    </div>
-                    <p class="text-xs text-[#6B6B6B]">Software Engineer, SF · 4 items on his Launchpad</p>
+                    <p class="font-medium text-sm">Samarth K. <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full font-normal">Cornell '26</span></p>
+                    <p class="text-xs text-[#6B6B6B]">MacBook Air · Standing Desk · The Economist</p>
                 </div>
                 <a href="/giftlist" class="btn-red px-3 py-1.5 text-xs rounded-full flex-shrink-0">Chip In</a>
             </div>
             <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center font-bold text-purple-700 text-sm flex-shrink-0">AL</div>
+                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center font-bold text-purple-700 text-sm flex-shrink-0">HA</div>
                 <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2">
-                        <p class="font-medium text-sm">Aisha L.</p>
-                        <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full">Cornell '26</span>
-                    </div>
-                    <p class="text-xs text-[#6B6B6B]">Consulting, Chicago · 5 items on her Launchpad</p>
+                    <p class="font-medium text-sm">Himani A. <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full font-normal">Cornell '26</span></p>
+                    <p class="text-xs text-[#6B6B6B]">Mechanical Keyboard · Monitors · Headphones</p>
+                </div>
+                <a href="/giftlist" class="btn-red px-3 py-1.5 text-xs rounded-full flex-shrink-0">Chip In</a>
+            </div>
+            <!-- Professor sending a gift -->
+            <div class="border border-amber-200 rounded-xl p-4 bg-amber-50/50 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center font-bold text-amber-700 text-sm flex-shrink-0">BT</div>
+                <div>
+                    <p class="font-medium text-sm">Brad T. <span class="text-[10px] text-amber-700 font-normal">— Professor</span></p>
+                    <p class="text-xs text-[#6B6B6B]">Sending a gift to Jessica H. — her top student. ❤️</p>
+                </div>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center font-bold text-green-700 text-sm flex-shrink-0">DG</div>
+                <div class="flex-1 min-w-0">
+                    <p class="font-medium text-sm">Davian G. <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full font-normal">Cornell '26</span></p>
+                    <p class="text-xs text-[#6B6B6B]">Tailored Blazer · Leather Bag · Dress Shoes</p>
+                </div>
+                <a href="/giftlist" class="btn-red px-3 py-1.5 text-xs rounded-full flex-shrink-0">Chip In</a>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-rose-50 flex items-center justify-center font-bold text-rose-700 text-sm flex-shrink-0">NB</div>
+                <div class="flex-1 min-w-0">
+                    <p class="font-medium text-sm">Nikhil B. <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full font-normal">Cornell '26</span></p>
+                    <p class="text-xs text-[#6B6B6B]">MacBook Air · AirPods Pro · Wireless Mouse</p>
+                </div>
+                <a href="/giftlist" class="btn-red px-3 py-1.5 text-xs rounded-full flex-shrink-0">Chip In</a>
+            </div>
+            <div class="border border-[#E8E8E8] rounded-xl p-4 bg-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center font-bold text-teal-700 text-sm flex-shrink-0">SK</div>
+                <div class="flex-1 min-w-0">
+                    <p class="font-medium text-sm">Sofia K. <span class="text-[10px] text-[#E03030] bg-[#E03030]/10 px-1.5 py-0.5 rounded-full font-normal">Cornell '26</span></p>
+                    <p class="text-xs text-[#6B6B6B]">Gym Membership · Cookware · Ring Light</p>
                 </div>
                 <a href="/giftlist" class="btn-red px-3 py-1.5 text-xs rounded-full flex-shrink-0">Chip In</a>
             </div>
         </div>
 
-        <!-- Demo chip-in card -->
+        <!-- Demo chip-in -->
         <div class="border border-[#E8E8E8] rounded-xl p-5 bg-white">
             <h2 class="font-medium text-sm mb-3">Try chipping in</h2>
-            <p class="text-xs text-[#6B6B6B] mb-3">This is a demo. Pick an amount to chip in toward an item.</p>
+            <p class="text-xs text-[#6B6B6B] mb-3">Pick an amount to chip in toward an item.</p>
             <div class="flex gap-2 mb-3">
                 <button class="border border-[#E8E8E8] rounded-lg px-3 py-1.5 text-sm hover:border-[#1A1A1A] transition-colors">$25</button>
                 <button class="border border-[#1A1A1A] rounded-lg px-3 py-1.5 text-sm bg-[#1A1A1A] text-white">$50</button>
@@ -111,10 +135,10 @@
         </div>
     </div>
 
-    <footer class="border-t border-[#E8E8E8] py-6 px-5 mt-12 bg-white">
+    <footer class="border-t border-[#E8E8E8] py-8 px-6 mt-12 bg-white">
         <div class="max-w-6xl mx-auto flex items-center justify-between text-xs text-[#6B6B6B]">
-            <span>GradGift</span>
-            <div class="flex gap-4">
+            <span class="text-sm font-semibold">GradGift</span>
+            <div class="flex gap-6 text-sm">
                 <a href="/" class="link">Home</a>
                 <a href="/giftlist" class="link">Giftlist</a>
                 <a href="/school" class="link">School</a>

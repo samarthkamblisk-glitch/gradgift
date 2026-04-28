@@ -12,14 +12,10 @@
             theme: {
                 extend: {
                     colors: {
-                        red: { DEFAULT: '#E03030', 50: '#FFF5F5', 100: '#FFE0E0', 200: '#FFB8B8', 300: '#FF8A8A', 400: '#FF5252', 500: '#E03030', 600: '#C02020', 700: '#A01818', 800: '#801010', 900: '#600808' },
-                        cream: '#FDFBF7',
-                        dark: '#1A1A1A',
-                        gray: '#6B6B6B',
-                        light: '#E8E8E8'
+                        red: '#E03030', cream: '#FDFBF7', dark: '#1A1A1A', gray: '#6B6B6B', light: '#E8E8E8'
                     },
                     fontFamily: {
-                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif']
                     }
                 }
             }
@@ -40,31 +36,32 @@
 <body>
 
     <!-- NAV -->
-    <nav class="fixed top-0 w-full z-50 bg-[#FDFBF7]/90 backdrop-blur border-b border-[#E8E8E8]/50">
-        <div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between">
-            <a href="/" class="font-semibold text-sm tracking-tight">GradGift</a>
-            <div class="hidden md:flex items-center gap-6 text-sm text-[#6B6B6B]">
+    <nav class="fixed top-0 w-full z-50 bg-[#FDFBF7]/95 backdrop-blur border-b border-[#E8E8E8]/50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="font-bold text-base tracking-tight">GradGift</a>
+            <div class="hidden md:flex items-center gap-8 text-base text-[#6B6B6B]">
                 <a href="/giftlist" class="link">My Giftlist</a>
                 <a href="/school" class="link">My School</a>
                 <a href="/send-gift" class="link">Send a Gift</a>
             </div>
-            <a href="/send-gift" class="btn-red px-4 py-1.5 text-sm rounded-full">Send a Gift</a>
+            <a href="/send-gift" class="btn-red px-5 py-2 text-sm rounded-full">Send a Gift</a>
         </div>
     </nav>
 
     <!-- HERO -->
-    <section class="pt-28 pb-16 md:pt-36 md:pb-24 px-5">
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <p class="text-sm text-[#E03030] font-medium mb-4">Launching for Cornell '26</p>
                     <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] mb-5">
-                        The registry<br>
-                        for graduates
+                        Preparing to<br>
+                        enter the<br>
+                        <span class="text-[#E03030]">workforce</span>
                     </h1>
                     <p class="text-base md:text-lg text-[#6B6B6B] leading-relaxed max-w-md mb-8">
-                        Friends and family chip in for your career essentials. 
-                        A Herman Miller chair. LinkedIn Premium. A tailored blazer. 
+                        Friends and family chip in for what you actually need. 
+                        An office chair. LinkedIn Premium. A suit. 
                         No awkward asks.
                     </p>
                     <div class="flex gap-3">
@@ -75,7 +72,7 @@
                 <div class="w-full max-w-sm mx-auto">
                     <div class="border border-[#E8E8E8] rounded-2xl p-5 bg-white">
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center text-sm font-bold text-[#E03030]">JM</div>
+                            <div class="w-10 h-10 rounded-full bg-[#E03030]/10 flex items-center justify-center text-sm font-bold text-[#E03030]">JH</div>
                             <div>
                                 <p class="font-medium text-sm">Jessica's Launchpad</p>
                                 <p class="text-xs text-[#6B6B6B]">Cornell '26</p>
@@ -84,7 +81,7 @@
                         </div>
                         <div class="space-y-4">
                             <div>
-                                <div class="flex justify-between text-xs mb-1"><span class="font-medium">Herman Miller Aeron</span><span class="text-[#6B6B6B]">$1,195</span></div>
+                                <div class="flex justify-between text-xs mb-1"><span class="font-medium">Office Chair</span><span class="text-[#6B6B6B]">$500</span></div>
                                 <div class="bar"><div class="bar-fill" style="width:78%"></div></div>
                                 <p class="text-[11px] text-[#6B6B6B] mt-0.5">78% · 12 people chipped in</p>
                             </div>
@@ -94,7 +91,7 @@
                                 <p class="text-[11px] text-[#6B6B6B] mt-0.5">45% · 5 people chipped in</p>
                             </div>
                             <div>
-                                <div class="flex justify-between text-xs mb-1"><span class="font-medium">Tailored Navy Blazer</span><span class="text-[#6B6B6B]">$450</span></div>
+                                <div class="flex justify-between text-xs mb-1"><span class="font-medium">Tailored Blazer</span><span class="text-[#6B6B6B]">$450</span></div>
                                 <div class="bar"><div class="bar-fill" style="width:22%"></div></div>
                                 <p class="text-[11px] text-[#6B6B6B] mt-0.5">22% · 2 people chipped in</p>
                             </div>
@@ -106,7 +103,7 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section class="py-16 md:py-20 px-5">
+    <section class="py-16 md:py-20 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-8">How it works</h2>
             <div class="grid md:grid-cols-3 gap-6">
@@ -130,7 +127,7 @@
     </section>
 
     <!-- BRIEF STATS -->
-    <section class="py-12 border-y border-[#E8E8E8] px-5">
+    <section class="py-12 border-y border-[#E8E8E8] px-6">
         <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
                 <div class="text-2xl font-bold">4M</div>
@@ -152,7 +149,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-20 md:py-24 px-5 text-center">
+    <section class="py-20 md:py-24 px-6 text-center">
         <div class="max-w-lg mx-auto">
             <h2 class="text-2xl md:text-3xl font-bold mb-3">Launching for Cornell '26</h2>
             <p class="text-sm text-[#6B6B6B] mb-6">We're piloting with seniors this spring. Be first in line.</p>
@@ -161,10 +158,10 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-[#E8E8E8] py-6 px-5">
+    <footer class="border-t border-[#E8E8E8] py-8 px-6">
         <div class="max-w-6xl mx-auto flex items-center justify-between text-xs text-[#6B6B6B]">
-            <span>GradGift</span>
-            <div class="flex gap-4">
+            <span class="text-sm font-semibold">GradGift</span>
+            <div class="flex gap-6 text-sm">
                 <a href="/" class="link">Home</a>
                 <a href="/giftlist" class="link">Giftlist</a>
                 <a href="/school" class="link">School</a>
